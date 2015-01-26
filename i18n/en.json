@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Florian Schmidt"
+		]
+	},
+	"googleapiclient-desc": "Provides a copy of the Google PHP API Client to use within MediaWiki"
+}

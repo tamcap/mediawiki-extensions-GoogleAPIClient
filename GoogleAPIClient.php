@@ -31,12 +31,15 @@
 		'name' => 'GoogleAPIClient',
 		'author' => 'Florian Schmidt',
 		'url' => 'https://www.mediawiki.org/wiki/Extension:GoogleAPIClient',
-		'description' => 'Provides a copy of the Google PHP API Client to use within MediaWiki.',
+		'descriptionmsg' => 'googleapiclient-desc',
 		'version'  => '01.0',
 		'license-name' => "MIT/Apache",
 	);
 
 	$dir = __DIR__;
+
+	// Load message file
+	$wgMessagesDirs['GoogleAPIClient'] = $dir . '/i18n';
 
 	// Autoload Classes
 	$wgAutoloadClasses[ 'Google_Client' ] = $dir . '/lib/src/Google/Client.php';

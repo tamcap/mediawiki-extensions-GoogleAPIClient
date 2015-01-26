@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Raimond Spekking"
+		]
+	},
+	"googleapiclient-desc": "{{desc|name=GoogleAPIClient|url=httpss://www.mediawiki.org/wiki/Extension:GoogleAPIClient}}"
+}
