@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Benjozork"
+		]
+	},
+	"googleapiclient-desc": "Fournit une copie du client Google PHP API pour l'utiliser dans MediaWiki"
+}
