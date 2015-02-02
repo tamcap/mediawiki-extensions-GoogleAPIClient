@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aktron"
+		]
+	},
+	"googleapiclient-desc": "Poskytuje kopii Google PHP API Klienta, používáného v rámci MediaWiki"
+}
