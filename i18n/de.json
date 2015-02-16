@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Purodha"
 		]
 	},
-	"googleapiclient-desc": "Ergänzt eine Kopie des Google-PHP-API-Clients zur Verwendung innerhalb von MediaWiki"
+	"googleapiclient-desc": "Liefert eine Kopie des Google-PHP-API-Klienten zur Verwendung innerhalb von MediaWiki"
 }
