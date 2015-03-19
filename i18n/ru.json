@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"googleapiclient-desc": "Предоставляет копию Google PHP API-клиента для использования внутри MediaWiki"
+}
