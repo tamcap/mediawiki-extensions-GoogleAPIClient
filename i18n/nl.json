@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Esketti"
+		]
+	},
+	"googleapiclient-desc": "Biedt een kopie van de Google PHP API-Client te gebruiken binnen MediaWiki"
+}
