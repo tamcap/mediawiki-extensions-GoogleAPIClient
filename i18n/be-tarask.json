@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"googleapiclient-desc": "Падае копію кліенту Google PHP API для выкарыстаньня ў MediaWiki"
+}
