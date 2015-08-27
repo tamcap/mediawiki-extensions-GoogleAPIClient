@@ -1,0 +1,11 @@
+{
+    "name": "mediawiki/google-api-client",
+    "description": "This is an extension to mediawiki that provides google-api client",
+    "authors": [
+        {
+            "name": "Florian Schmidt",
+            "email": "florian.schmidt.welzow@t-online.de"
+        }
+    ],
+    "require": {}
+}
