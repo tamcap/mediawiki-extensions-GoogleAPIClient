@@ -91,7 +91,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
     // We got here from the redirect from a successful authorization grant,
     // fetch the access token
     $request = new Google_Http_Request(
-        self::OAUTH2_TOKEN_URI,
+        $this::OAUTH2_TOKEN_URI,
         'POST',
         array(),
         array(
@@ -166,7 +166,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
       $params['state'] = $this->state;
     }
 
-    return self::OAUTH2_AUTH_URL . "?" . http_build_query($params, '', '&');
+    return $this::OAUTH2_AUTH_URL . "?" . http_build_query($params, '', '&');
   }
 
   /**
@@ -315,7 +315,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
   private function refreshTokenRequest($params)
   {
     $http = new Google_Http_Request(
-        self::OAUTH2_TOKEN_URI,
+        $this::OAUTH2_TOKEN_URI,
         'POST',
         array(),
         $params
@@ -366,7 +366,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
       }
     }
     $request = new Google_Http_Request(
-        self::OAUTH2_REVOKE_URI,
+        $this::OAUTH2_REVOKE_URI,
         'POST',
         array(),
         "token=$token"
@@ -470,7 +470,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
       $audience = $this->client->getClassConfig($this, 'client_id');
     }
 
-    return $this->verifySignedJwtWithCerts($id_token, $certs, $audience, self::OAUTH2_ISSUER);
+    return $this->verifySignedJwtWithCerts($id_token, $certs, $audience, $this::OAUTH2_ISSUER);
   }
 
   /**
@@ -493,7 +493,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
   ) {
     if (!$max_expiry) {
       // Set the maximum time we will accept a token for.
-      $max_expiry = self::MAX_TOKEN_LIFETIME_SECS;
+      $max_expiry = $this::MAX_TOKEN_LIFETIME_SECS;
     }
 
     $segments = explode(".", $jwt);
@@ -538,7 +538,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
     if (!$iat) {
       throw new Google_Auth_Exception("No issue time in token: $json_body");
     }
-    $earliest = $iat - self::CLOCK_SKEW_SECS;
+    $earliest = $iat - $this::CLOCK_SKEW_SECS;
 
     // Check expiration timestamp
     $now = time();
@@ -555,7 +555,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
       );
     }
 
-    $latest = $exp + self::CLOCK_SKEW_SECS;
+    $latest = $exp + $this::CLOCK_SKEW_SECS;
     if ($now < $earliest) {
       throw new Google_Auth_Exception(
           sprintf(
